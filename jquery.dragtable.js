@@ -127,9 +127,9 @@
       }
       if (from < to) {
         for (i = from; i < to; i++) {
-          col1 = thtb.find('> tr > td:nth-child(' + i + ')')
+          col1 = thtb.find('> tr:not(.no-records-found) > td:nth-child(' + i + ')')
             .add(thtb.find('> tr > th:nth-child(' + i + ')'));
-          col2 = thtb.find('> tr > td:nth-child(' + (i + 1) + ')')
+          col2 = thtb.find('> tr:not(.no-records-found) > td:nth-child(' + (i + 1) + ')')
             .add(thtb.find('> tr > th:nth-child(' + (i + 1) + ')'));
           for (j = 0; j < col1.length; j++) {
             swapNodes(col1[j], col2[j]);
